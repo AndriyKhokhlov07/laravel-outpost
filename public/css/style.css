@@ -1,0 +1,2760 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+body{
+    font-family: 'GalanoGrotesque';
+    word-spacing: 2px;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+}
+
+
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('../fonts/galano/GalanoGrotesque-Bold.eot');
+    src: local('Galano Grotesque Bold'), local('GalanoGrotesque-Bold'),
+    url('../fonts/galano/GalanoGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/galano/GalanoGrotesque-Bold.woff2') format('woff2'),
+    url('../fonts/galano/GalanoGrotesque-Bold.woff') format('woff'),
+    url('../fonts/galano/GalanoGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('../fonts/galano/GalanoGrotesque-SemiBold.eot');
+    src: local('Galano Grotesque SemiBold'), local('GalanoGrotesque-SemiBold'),
+    url('public/fonts/galano/GalanoGrotesque-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/galano/GalanoGrotesque-SemiBold.woff2') format('woff2'),
+    url('../fonts/galano/GalanoGrotesque-SemiBold.woff') format('woff'),
+    url('../fonts/galano/GalanoGrotesque-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'GalanoGrotesque';
+    src: url('../fonts/galano/GalanoGrotesque-Light.eot');
+    src: local('Galano Grotesque Light'), local('GalanoGrotesque-Light'),
+    url('../fonts/galano/GalanoGrotesque-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/galano/GalanoGrotesque-Light.woff2') format('woff2'),
+    url('../fonts/galano/GalanoGrotesque-Light.woff') format('woff'),
+    url('../fonts/galano/GalanoGrotesque-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+.hide{
+    display: none;
+}
+.fx{
+    display: flex;
+    flex-direction: row;
+}
+.fx.w{
+    flex-wrap: wrap;
+}
+.fx>* {
+    box-sizing: border-box;
+}
+
+
+
+/********** HEADER ***********/
+.header {
+    background: #fff;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    z-index: 10;
+}
+.header .main_width,
+.footer .main_width,
+.main_width{
+    justify-content: space-between;
+    display: flex;
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.main_width{
+    display: block;
+}
+.header .main_width{
+    margin-bottom: 20px;
+}
+.header .main_width .main_menu{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.header .main_width .main_menu ul{
+    list-style: none;
+}
+.header .main_width .main_menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.header .main_width .main_menu li {
+    display: flex;
+    font-weight: normal;
+    align-items: center;
+    padding: 30px 8px 10px 8px;
+}
+.mob_block {
+    display: none;
+}
+.header .main_width .color_logo{
+    width: 170px;
+    padding: 20px 20px 0;
+}
+.header .main_width .main_menu .button_li{
+    background: #AF332B;
+}
+.header .main_width .main_menu .button_li a{
+    color: white;
+}
+/********** HEADER END ***********/
+
+/********** FOOTER ***********/
+.footer .main_width{
+    display: block;
+    background: #000;
+    padding-top: 3px;
+}
+.footer {
+    color: #fff;
+    padding-top: 10px;
+}
+.footer .first_footer_block,
+.footer .second_footer_block{
+    display: flex;
+    background: #000;
+    padding: 50px 50px 0 0;
+}
+.footer .second_footer_block{
+    padding-bottom: 100px;
+}
+.footer .first_footer_block .menu_first,
+.footer .first_footer_block .menu_second,
+.footer .first_footer_block .menu_third{
+    display: flex;
+    flex-direction: column;
+}
+.footer .first_footer_block .menu_first a,
+.footer .first_footer_block .menu_second a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer .first_footer_block .menu_second a:last-child {
+    line-height: 1;
+}
+.footer .first_footer_block .menu_first{
+    font-size: 18px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    width: 35%;
+    padding-left: 10px;
+}
+.footer .first_footer_block .menu_second{
+    font-size: 13px;
+    text-transform: uppercase;
+    width: 33%;
+    line-height: 1.5;
+}
+.footer .first_footer_block .menu_third{
+    width: 19%;
+    margin-left: 30px;
+}
+.footer .first_footer_block .menu_third a{
+    font-size: 26px;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #fff;
+}
+.footer .first_footer_block .menu_third p{
+    font-size: 10px;
+    line-height: 1.5;
+    color: #fff;
+    margin-top: 15px;
+}
+.footer .second_footer_block .menu_first{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+}
+.footer .second_footer_block .menu_first .sign_news_block{
+    border-bottom: 2px solid #fff;
+    position: relative;
+}
+.footer .second_footer_block .menu_first .sign_news_block img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+}
+.footer .second_footer_block .menu_first .sign_news_block .sign_news{
+    font-size: 25px;
+    letter-spacing: 5px;
+    max-width: 100%;
+    background: #000;
+    border: none;
+    outline: none;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.footer .second_footer_block .menu_first .sign_news_block .icon_sign_news{
+    position: absolute;
+    right: 0;
+}
+.footer .second_footer_block .menu_first .sign_news_block .icon_sign_news.fa{
+    color: #fff;
+}
+.footer .second_footer_block .menu_first .social_networks{
+    margin: 40px 0 0 0;
+}
+.footer .second_footer_block .menu_first .social_networks a{
+    text-align: center;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.footer .second_footer_block .menu_first .social_networks:hover a{
+    opacity: .6;
+}
+.footer .second_footer_block .menu_first .social_networks a:hover{
+    opacity: 1;
+}
+.footer .second_footer_block .menu_first .social_networks a img{
+    padding: 15px;
+}
+.footer .second_footer_block .menu_second{
+    width: 27%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+}
+.footer .second_footer_block .menu_second p{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.footer .second_footer_block .menu_second a{
+    font-size: 28px;
+    color: #fff;
+    text-decoration: none;
+}
+.footer .second_footer_block .menu_second .col_mail{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.footer .second_footer_block .menu_second .info_txt{
+    margin-bottom: 50px;
+}
+.footer .second_footer_block .menu_second .info_txt span{
+    font-size: 15px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.footer .second_footer_block .menu_second .info_txt a{
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #fff;
+    margin-right: 20px;
+}
+.footer .second_footer_block .menu_second .address_txt{
+    font-size: 21px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    line-height: 1.1;
+}
+.footer .second_footer_block .menu_second .address_txt a{
+    width: 63%;
+    margin-top: 8px;
+}
+.footer .main_width .first_footer_block hr{
+    display: none;
+}
+/********** FOOTER END ***********/
+
+
+.first_title,
+.second_title{
+    font-size: 65px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.second_title{
+    font-size: 55px;
+    font-weight: 300;
+}
+.about_coliving h1,
+.outpost_blog h1,
+.coliving_locations h3,
+.oc_info_block h1{
+    font-size: 65px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+.coliving_locations{
+    margin-top: 50px;
+}
+.coliving_locations h3{
+    margin-top: 20px;
+    margin-bottom: 0;
+    line-height: 1;
+}
+.about_coliving p,
+.coliving_locations p,
+.outpost_experience p,
+.outpost_blog p,
+.oc_info_block p{
+    font-size: 40px;
+    text-transform: uppercase;
+    word-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+.coliving_locations p,
+.outpost_experience p{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+.outpost_experience p {
+    border-bottom: 1px solid #000;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+.coliving_locations .cities_name{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+.coliving_locations .coliving_cities{
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+.coliving_locations .coliving_cities .cities_group{
+    width: 50%;
+}
+.coliving_locations .coliving_cities .cities_group.left{
+    padding-right: 25px;
+}
+.coliving_locations .coliving_cities .cities_group.right{
+    padding-left: 25px;
+}
+.coliving_locations .coliving_cities .cities_group img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.coliving_locations .coliving_cities .cities_group p{
+    font-size: 40px;
+    font-weight: 600;
+}
+.hr,
+.hr_experience{
+    width: 100%;
+    height: 23px;
+    background: #749785;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.hr_experience{
+    margin-bottom: 20px;
+}
+.coliving_locations .hr{
+    margin-top: 185px;
+}
+.coliving_included .hr,
+.outpost_experience .hr,
+.hr_footer{
+    display: none;
+}
+.about_coliving img,
+.coliving_spaces img,
+.coliving_community img,
+.outpost_blog img{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.coliving_concept, .coliving_spaces, .coliving_community{
+    margin-bottom: 170px;
+}
+.coliving_concept .content_width,
+.coliving_spaces .content_width,
+.coliving_community .content_width,
+.outpost_coliving_blog .content_width{
+    display: flex;
+}
+.coliving_community .coliving_group{
+    margin-bottom: 50px;
+}
+.coliving_concept .col_title,
+.coliving_spaces .col_title,
+.coliving_community .col_title,
+.outpost_coliving_blog .col_title{
+    width: 50%;
+    font-size: 70px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.coliving_concept .col_paragraph,
+.coliving_spaces .col_paragraph,
+.coliving_community .col_paragraph,
+.outpost_coliving_blog .col_paragraph,
+.oc_block .col_paragraph{
+    width: 50%;
+    font-size: 18px;
+    /*line-height: 1.3;*/
+    text-align: justify;
+}
+.outpost_coliving_blog .col_paragraph {
+    margin-left: 40px;
+}
+.coliving_included{
+    margin-bottom: 190px;
+}
+.coliving_included .coliving_icons{
+    display: flex;
+}
+.coliving_included .coliving_icons .item img {
+    height: 100px;
+}
+.coliving_included .coliving_icons .item .title{
+    font-size: 25px;
+}
+.coliving_included .coliving_icons .item{
+    display: block;
+    width: 25%;
+    text-align: center;
+    border: none;
+    margin: 0 40px 80px;
+}
+
+.coliving_included .coliving_icons .item img{
+    /*display: table;*/
+    /*margin: 0 auto 70px;*/
+    display: flex;
+    width: 130px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0;
+}
+.coliving_included .coliving_icons .item .title{
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.coliving_included .coliving_icons .item p.text{
+    /*font-size: 18px;*/
+    /*text-transform: initial;*/
+    /*line-height: 1.4;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    font-weight: 300;
+    text-align: justify;
+    text-transform: none;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+.coliving_included a,
+.coliving_community a,
+.coliving_people a,
+.coliving_blog .more_info{
+    display: block;
+    width: max-content;
+    font-size: 40px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #AF332B;
+    color: #fff;
+    padding: 0 10px;
+    float: right;
+}
+.coliving_community .content_width{
+    margin-bottom: 50px;
+}
+.outpost_experience .first_title{
+    line-height: 1;
+}
+.outpost_experience .second_title {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+}
+.coliving_included .first_title span,
+.outpost_experience .first_title span{
+    font-weight: 400;
+}
+.coliving_included .first_title{
+    /*margin-bottom: 100px;*/
+
+}
+.outpost_experience .items_experience li{
+    border-bottom: #333 2px solid;
+    font-weight: 300;
+    box-sizing: border-box;
+    font-size: 100%;
+    background: transparent;
+    list-style-type: none;
+    cursor: pointer;
+
+    /*font-family: 'Neue Haas Grotesk Display Pro', sans-serif;*/
+    /*list-style-type: none;*/
+    /*cursor: pointer;*/
+    /*border-bottom: 1px solid #000;*/
+}
+.outpost_experience .items_experience li .item{
+    list-style-type: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 5px 50px 15px 0;
+    text-align: left;
+    width: 100%;
+    word-spacing: 5px;
+    text-transform: uppercase;
+
+
+    /*display: block;*/
+    /*font-weight: 600;*/
+    /*font-size: 35px;*/
+    /*text-transform: uppercase;*/
+    /*margin: 0 15px 0 10px;*/
+}
+.outpost_experience .items_experience li label{
+    cursor: pointer;
+    position: relative;
+}
+.outpost_experience .items_experience li label:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 39px;
+    transform: translateY(-50%);
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #111;
+}
+.outpost_experience .items_experience li label:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 48px;
+    transform: translateY(-50%);
+    display: block;
+    width: 2px;
+    height: 20px;
+    background: #111;
+    transition: .2s;
+}
+.outpost_experience .items_experience li .text{
+    font-family: 'GalanoGrotesque';
+    position: relative;
+    display: block;
+    font-size: 23px;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.3;
+    transition: 1s;
+    margin: 0 100px 13px 10px;
+}
+.outpost_experience .items_experience ul li input:checked ~ .text{
+    max-height: 530px;
+}
+.peoples_feedback{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.coliving_people{
+    position: relative;
+    margin-top: 150px;
+    margin-bottom: 25px;
+}
+.coliving_people .item{
+    width: 30%;
+    display: flex;
+    height: max-content;
+    border: 1px dashed #AF332B;
+}
+.coliving_people .item.left{
+    border-radius: 50px;
+    padding: 30px 30px;
+}
+.coliving_people .item.right{
+    width: 30%;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    height: max-content;
+    flex-direction: column;
+    padding: 30px;
+    border-color: #749785;
+}
+.coliving_people .item.right div{
+    display: flex;
+}
+.coliving_people .item.right .item_img{
+    margin: 10px 20px 0 0;
+}
+.coliving_people .item.center{
+    display: block;
+    width: 330px;
+    position: absolute;
+    top: 25%;
+    left: 31%;
+    background: #fff;
+    border-radius: 100%;
+    border-color: #749785;
+    opacity: 1;
+    z-index: 10;
+    padding: 50px;
+    aspect-ratio: 1 / 1;
+}
+.coliving_people .item.center .item_title{
+    text-align: start;
+    padding: 40px 0 0 100px;
+}
+.coliving_people .item.center .item_img {
+    margin-top: 10px;
+}
+.coliving_people .item.center div{
+    display: flex;
+}
+.coliving_people .item_img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+.coliving_people .item.left .triangle-bottomleft{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -34px;
+    left: 67px;
+    border: 0 solid transparent;
+    border-top-width: 35px;
+    border-right: 70px solid #AF332B;
+}
+.coliving_people .item.right .triangle-topright{
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -55px;
+    right: 120px;
+    border: 0 solid transparent;
+    border-bottom-width: 55px;
+    border-top-width: 0;
+    border-left: 115px solid #749785;
+}
+.coliving_people .item.center .triangle-bottom{
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 8px;
+    transform: rotate(37deg);
+    border: 0 solid transparent;
+    border-left-width: 25px;
+    border-right-width: 25px;
+    border-top: 40px solid #749785;
+}
+.coliving_people .item_title,
+.coliving_blog .item_title{
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 100;
+    line-height: 0.9;
+}
+.coliving_people .item_text,
+.coliving_blog .item_text{
+    font-size: 15px;
+    padding-top: 5px;
+    line-height: 1.4;
+}
+.coliving_people .item.center .item_text{
+    width: 60%;
+}
+.coliving_people .item.left .item_text{
+    width: 80%;
+}
+.content_bottom{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+.coliving_people .first_title{
+    width: 15%;
+    line-height: 1;
+}
+.coliving_people .second_title{
+    display: block;
+    width: 100%;
+    line-height: 1.1;
+}
+.coliving_people a,
+.coliving_blog .more_info{
+    display: flex;
+    width: max-content;
+    height: min-content;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #AF332B;
+    color: #fff;
+    padding: 0 10px 14px;
+    line-height: 0.7;
+}
+.coliving_people .hr{
+    margin-top: 60px;
+}
+.coliving_blog{
+    position: relative;
+    margin-bottom: 70px;
+}
+.coliving_blog .first_title{
+    margin-bottom: 20px;
+    width: 50%;
+    line-height: 1;
+}
+.coliving_blog .item{
+    width: 28%;
+}
+.coliving_blog .blog_content{
+    display: flex;
+    justify-content: space-between;
+}
+.coliving_blog .item:last-child{
+    margin-left: 50px;
+    margin-right: 0;
+}
+.coliving_blog .item_title a{
+    text-decoration: none;
+    line-height: 1;
+    color: #000;
+}
+.coliving_blog h1{
+    width: 40%;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+.coliving_blog .item_text{
+    margin-bottom: 70px;
+}
+.coliving_blog .blog_arrow{
+    width: 30px;
+    float: right;
+    margin: 20px 0 20px 0;
+}
+.coliving_blog .img img{
+    width: 100%;
+    opacity: 1;
+}
+/*.coliving_blog .more_info{*/
+/*    position: absolute;*/
+/*    right: 0;*/
+/*    bottom: -20%;*/
+/*}*/
+.coliving_blog .blog_content .blog_arrow-down{
+    display: none;
+}
+.header .main_width .main_menu .mob_block {
+    display: none;
+}
+.mob_block{
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    line-height: 1;
+    align-items: center;
+    list-style-type: none;
+    font-family: FuturaBook, sans-serif;
+    color: black;
+    background: transparent;
+    text-transform: none;
+    box-sizing: content-box;
+    margin-left: 20px;
+}
+.open_sidebar{
+    list-style-type: none;
+    font-family: FuturaBook, sans-serif;
+    color: #AF332B;
+    text-transform: none;
+    box-sizing: border-box;
+    font-size: 100%;
+    background: transparent;
+    line-height: 1;
+    position: relative;
+    height: 28px;
+    width: 24px;
+    cursor: pointer;
+    z-index: 99;
+    margin-left: 10px;
+    display: none;
+}
+.open_sidebar::before{
+    content: "";
+    top: 24%;
+}
+.open_sidebar::after{
+    content: "";
+    bottom: 17%;
+}
+.open_sidebar::before, .open_sidebar::after{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 2px;
+    background: #AF332B;
+    border-radius: 2px;
+}
+.icon-menu{
+    list-style-type: none;
+    color: #AF332B;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'main', sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 2px;
+    background: #AF332B;
+    border-radius: 2px;
+    width: 24px;
+}
+#mob_sidebar:checked ~ .sidebar_bg{
+    display: block;
+}
+#mob_sidebar:checked ~ .sidebar{
+    width: 270px;
+}
+.sidebar{
+    font: normal 15px/1.2 'futura_r', 'LatoLight', Tahoma, Arial, Helvetica, Geneva, sans-serif;
+    box-sizing: border-box;
+    font-size: 100%;
+    background: #201a16;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .3);
+    z-index: 9002;
+    overflow-y: auto;
+    transition: .5s;
+    color: #333;
+    width: 0;
+    right: 0;
+}
+.wrapper{
+    font: normal 15px/1.2 'futura_r', 'LatoLight', Tahoma, Arial, Helvetica, Geneva, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+    font-size: 100%;
+    background: transparent;
+    padding: 0 25px 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    width: 270px;
+}
+.sidebar .menu{
+    font: normal 15px/1.2 'futura_r', 'LatoLight', Tahoma, Arial, Helvetica, Geneva, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+    font-size: 100%;
+    background: transparent;
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.sidebar .menu li{
+    font: normal 15px/1.2 'futura_r', 'LatoLight', Tahoma, Arial, Helvetica, Geneva, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+    background: transparent;
+    font-size: 18px;
+    display: flex;
+    list-style-type: none;
+    text-transform: uppercase;
+    align-items: flex-start;
+    padding: 0;
+}
+.sidebar .menu li a{
+    font: normal 15px/1.2 'futura_r', 'LatoLight', Tahoma, Arial, Helvetica, Geneva, sans-serif;
+    list-style-type: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    background: transparent;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1;
+    transition: .3s;
+    width: 100%;
+    padding: 11px 0;
+    font-size: 12px;
+}
+.sidebar_bg{
+    display: none;
+    font: normal 15px/1.2 'futura_r', 'LatoLight', Tahoma, Arial, Helvetica, Geneva, sans-serif;
+    box-sizing: border-box;
+    font-size: 100%;
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9001;
+    transition: opacity 1s;
+    opacity: 1;
+    right: 0;
+}
+.menu li div.green{
+    font: normal 15px/1.2 'futura_r', 'LatoLight', Tahoma, Arial, Helvetica, Geneva, sans-serif;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    background: transparent;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #c01e32;
+}
+.sidebar .menu li.menu_about{
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.sidebar .menu li{
+    align-items: flex-start;
+    padding: 0;
+}
+.sidebar .menu li span{
+    display: block;
+    font-weight: normal;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    line-height: 1;
+    transition: .3s;
+}
+.menu li.menu_about span:after{
+    content: "";
+    position: absolute;
+    top: calc(50% - 6px);
+    right: -14px;
+    display: block;
+    height: 6px;
+    width: 6px;
+    background: transparent;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #999;
+    transform: rotate(-45deg);
+}
+.menu li.menu_about span{
+    position: relative;
+    width: auto !important;
+}
+.sidebar .menu li.menu_about ul{
+    display: block;
+    margin: 0 0 0 15px;
+}
+.sidebar .menu li .button{
+    padding: 14px 20px;
+    background: #c01e32;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+.sidebar .menu li a:not(.button), .sidebar .menu li span:not(.button){
+    width: 100%;
+    padding: 11px 0;
+    font-size: 12px;
+}
+
+.sidebar .info a{
+    display: block;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+    line-height: 2;
+    text-decoration: none;
+}
+
+.sidebar .menu li.menu_about ul a{
+    width: 100%;
+    padding: 8px 0;
+    font-size: 12px;
+    text-transform: none;
+}
+.about_coliving .main_menu .button_li,
+.oc_info_block .main_menu .button_li{
+    display: none;
+}
+
+.coliving_people a:before,
+.coliving_blog .more_info:before{
+    content: attr(data-text);
+}
+.coliving_people a:after,
+.coliving_blog .more_info:after{
+    content: ' >>>';
+}
+
+/**** BLOG PAGE ****/
+.outpost_blog h1, .outpost_coliving_blog .first_title,
+.outpost_coliving_blog .second_title, .our_houses .first_title,
+.follow_us .first_title{
+    font-size: 45px;
+}
+.outpost_coliving_blog .blog_content{
+    display: flex;
+    width: 100%;
+}
+.outpost_coliving_blog .second_title {
+    margin-bottom: 130px;
+}
+.outpost_coliving_blog .blog_list {
+    width: 50%;
+}
+.outpost_coliving_blog .blog_list.first {
+    margin-right: 20px;
+}
+.outpost_coliving_blog .blog_list.second {
+    margin-left: 20px;
+}
+.outpost_coliving_blog .blog_list .item img{
+    width: 100%;
+    height: 360px;
+}
+.outpost_coliving_blog .blog_list .item{
+    margin-bottom: 100px;
+}
+.outpost_coliving_blog .blog_list .item_title{
+    margin: 25px 0 0 0;
+}
+.outpost_coliving_blog .blog_list .user_post{
+    font-size: 20px;
+    font-weight: 500;
+}
+.outpost_coliving_blog .blog_list .item_title a{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.1;
+}
+.outpost_coliving_blog .blog_list .item_title a span{
+    font-weight: 400;
+}
+.outpost_coliving_blog .blog_list .item_text {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-top: 35px;
+}
+.outpost_blog p{
+    margin-bottom: 10px;
+}
+.outpost_blog .path {
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 0 20px;
+}
+.outpost_blog .path>div {
+    display: inline-block;
+    color: #777;
+    position: relative;
+    z-index: 1;
+    margin-right: 20px;
+}
+.outpost_blog .path>div:last-child {
+    padding-left: 5px;
+}
+.outpost_blog .path div a {
+    color: #000;
+    text-decoration: none;
+}
+.outpost_blog .path>div:after {
+    content: '';
+    width: 2px;
+    height: 75%;
+    position: absolute;
+    right: -17px;
+    top: 4px;
+    background: #000;
+    transform: rotate(25deg);
+}
+.outpost_blog .path>div:last-child:after {
+    display: none;
+}
+.our_houses {
+    margin-bottom: 30px;
+}
+.our_houses .content_houses{
+    display: flex;
+    margin-bottom: 150px;
+}
+.our_houses .content_houses .house_item{
+    width: 33%;
+    margin-right: 10px;
+}
+.our_houses .content_houses .house_item.last{
+    margin-right: 0;
+}
+.our_houses .content_houses .house_item img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.our_houses .content_houses .house_item .item_price{
+    font-size: 18px;
+    font-weight: 500;
+}
+.our_houses .first_title{
+    margin-bottom: 25px;
+}
+.our_houses .content_houses .house_item .col_paragraph{
+    display: flex;
+    margin-bottom: 8px;
+}
+.our_houses .content_houses .house_item .item_title,
+.our_houses .content_houses .house_item .col_paragraph span{
+    font-size: 25px;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1.1;
+}
+.our_houses .content_houses .house_item .col_paragraph span{
+    font-weight: 400;
+    margin-left: 10px;
+}
+.our_houses .coliving_img {
+    width: 100%;
+}
+.follow_us {
+    position: relative;
+    margin-bottom: 150px;
+}
+.follow_us .social_networks {
+    margin: 30px 0 0 0;
+}
+.follow_us .social_networks a {
+    text-align: center;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.follow_us .social_networks a img {
+    padding: 15px;
+}
+.follow_us .sign_news_block {
+    width: 45%;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    border-bottom: 2px solid #000;
+    margin-right: 100px;
+}
+.follow_us .sign_news_block .sign_news {
+    font-size: 25px;
+    background: #fff;
+    border: none;
+    outline: none;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+.follow_us .sign_news_block img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+}
+.follow_us .first_title {
+    letter-spacing: 3px;
+}
+/**** BLOG PAGE END ****/
+
+/**** HOT DEALS PAGE ****/
+.hot-deals_block h1, .hot-deals_block p,
+.hot-deals_block .content_width .first_title{
+    font-size: 45px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.hot-deals_img{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.hot-deals_block .content_width{
+    display: flex;
+    margin-bottom: 50px;
+}
+.hot-deals_block .content_width .col_title,
+.hot-deals_block .content_width .col_paragraph{
+    width: 50%;
+}
+.hot-deals_block .content_width .first_title{
+    font-weight: 600;
+}
+.hot-deals_block .content_width .first_title .executive {
+    font-weight: 500;
+}
+.hot-deals_block .content_width .first_title .executive2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+.hot-deals_block .content_width .second_title{
+    font-weight: 500;
+    line-height: 1;
+}
+.hot-deals_block .content_width .second_title span{
+    font-size: 38px;
+    font-weight: 400;
+}
+.hot-deals_block .prom_price,
+.hot-deals_block .live_time .move_in,
+.hot-deals_block .live_time .min_stay,
+.hot-deals_block .live_time .max_stay,
+.hot-deals_block .ask_about,
+.hot-deals_block .info_stay{
+    font-size: 20px;
+}
+.hot-deals_block .prom_price,
+.hot-deals_block .live_time,
+.hot-deals_block .ask_about,
+.hot-deals_block .info_stay{
+    margin-bottom: 20px;
+}
+.hot-deals_block .prom_price span{
+    font-size: 30px;
+    font-weight: 500;
+}
+.hot-deals_block .live_time span{
+    text-transform: none;
+}
+.hot-deals_block .limited_time,
+.hot-deals_block .occupant,
+.hot-deals_block .prices_utilities{
+    font-size: 20px;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+.hot-deals_block .book_now{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 25px;
+}
+.hot-deals_block .book_now p{
+    width: min-content;
+    font-size: 30px;
+    color: #AF332B;
+    text-align: end;
+    margin-right: 20px;
+}
+.hot-deals_block a{
+    display: block;
+    width: max-content;
+    font-size: 40px;
+    bottom: 0;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #AF332B;
+    color: #fff;
+    padding: 0 25px 10px 8px;
+    line-height: 1.3;
+}
+.hot-deals_block .av_book {
+    padding: 5px 25px 0 8px;
+    line-height: 1;
+}
+.hot-deals_block .coliving_people .item_text{
+    text-transform: none;
+}
+.hot-deals_block .coliving_included .content_width{
+    display: flex;
+    flex-direction: column;
+}
+.hot-deals_block .coliving_included .hr{
+    display: block;
+}
+.hot-deals_block .coliving_included {
+    margin-bottom: 100px;
+}
+/**** HOT DEALS PAGE END ****/
+
+
+/**** MAIN PAGE ****/
+.main_width.rooms {
+    margin: 30px auto;
+}
+.main_width.rooms .room {
+    width: calc(50% - 15px);
+    margin: 0 30px 40px 0;
+}
+.main_width.rooms .img {
+    display: block;
+    width: 100%;
+    padding-bottom: 70%;
+    position: relative;
+}
+.main_width.rooms .room .new {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    z-index: 2;
+    display: inline-block;
+    background: #c01e32;
+    text-align: center;
+    padding: 3px 18px 2px;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.main_width.rooms .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fx.ch2>*:nth-child(2n) {
+    margin-right: 0;
+}
+.main_width.main_page .oc_block .right_text{
+    justify-content: right;
+    margin-top: 100px;
+}
+.main_width.main_page .oc_block .right_text a{
+    margin-bottom: 0;
+}
+.main_width.main_page .right_text a{
+    display: block;
+    width: max-content;
+    font-size: 40px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+    float: right;
+    background: #AF332B;
+    color: #fff;
+    line-height: 0.7;
+    padding: 0 10px 14px;
+    margin-bottom: 30px;
+}
+.right_text a:before{
+    content: attr(data-text);
+}
+.right_text a:after{
+    content: ">>>";
+}
+.right_text .button3:after{
+    content: "";
+}
+.main_width.main_page .oc_block .col_paragraph {
+    width: 60%;
+}
+.main_width.main_page .oc_block .col_paragraph .items_experience{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 30px;
+    background-color: #fff;
+    z-index: 5;
+}
+
+.main_width.main_page .oc_block .content_width,
+.main_width.main_page .oc_block .col_paragraph .items_experience div{
+    display: flex;
+}
+.oc_block .col_title{
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    position: relative;
+}
+.main_width.main_page .oc_block .content_row label.first_item{
+    padding-left: 10px;
+    padding-right: 35px;
+}
+.main_width.main_page .oc_block .content_row label,
+.main_width.main_page .oc_block .content_row_title label{
+    display: flex;
+    align-items: baseline;
+    font-size: 150px;
+    font-weight: bold;
+    line-height: 0.4;
+    z-index: 3;
+    padding-right: 20px;
+}
+.main_width.main_page .oc_block .content_row_title label {
+    padding-right: 45px;
+}
+.main_width.main_page .main_search {
+    grid-column-gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
+.main_width.main_page .main_search a{
+    padding: 2px;
+}
+.main_width.main_page .main_search a,
+.main_width.rooms .room a{
+    display: flex;
+    width: 25%;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+}
+.main_width.main_page .main_search a:hover{
+    background-color: #eff0f3;
+    border-radius: 4px;
+}
+.main_width.rooms .room .annotation{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.main_width.main_page .main_search a img{
+    height: 100%;
+    width: 40px;
+    margin-right: 15px;
+}
+.oc_info_block h1 {
+    font-size: 37px;
+    line-height: 1;
+    margin-bottom: 15px;
+}
+.oc_info_block p{
+    font-size: 20px;
+    width: 100%;
+}
+.main_width.rooms .room a{
+    width: auto;
+}
+.annotation p{
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: none;
+}
+.main_width.main_page .coliving_people .content_houses{
+    margin-bottom: 160px;
+}
+
+
+/*.main_width.main_page .item_title{*/
+/*    font-weight: 600;*/
+/*}*/
+
+
+
+.bounce_left {
+    display: block;
+    position: absolute;
+    bottom: -160px;
+    left: -35px;
+    width: 550px;
+    border-radius: 100%;
+    border: 1px dashed #AF332B;
+    opacity: 1;
+    z-index: 1;
+    aspect-ratio: 1 / 1;
+}
+.triangle_bounce{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 25px;
+    width: 370px;
+
+}
+.triangle_bounce .item_title{
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+}
+.triangle_bounce div {
+    width: 100%;
+    display: flex;
+}
+.triangle_bounce .item_text {
+    width: 100%;
+    font-size: 20px;
+    padding-top: 20px;
+    line-height: 1.2;
+    /*margin-left: 50px;*/
+    /*margin-right: 50px;*/
+}
+.main_width.main_page .coliving_people {
+    z-index: 2;
+    margin-top: 0;
+}
+.main_width.main_page .oc_block .triangle-bottom {
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 334px;
+    right: 40px;
+    transform: rotate(216deg);
+    border: 0 solid transparent;
+    border-left-width: 25px;
+    border-right-width: 25px;
+    border-top: 40px solid #AF332B;
+}
+.main_width.main_page .content_width{
+    grid-column-gap: 30px;
+    margin: 30px 0;
+}
+.main_width.main_page .oc_block .content_width{
+    overflow: hidden;
+    grid-column-gap: unset;
+    padding: 0 0 30px 0;
+    margin: 30px 0 0 0;
+}
+.main_width.main_page .coliving_people .hr {
+    margin-top: 0;
+}
+.main_width.main_page .coliving_concept,
+.main_width.main_page .coliving_spaces,
+.main_width.main_page .coliving_community {
+     margin-bottom: 70px;
+}
+
+.main_width.main_page .items_experience li {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    list-style-type: none;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}
+
+.main_width.main_page .items_experience li .item {
+    display: block;
+    font-weight: 500;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin: 15px 15px 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.main_width.main_page .items_experience .text{
+    font-family: 'GalanoGrotesque';
+    position: relative;
+    display: block;
+    font-size: 18px;
+    overflow: hidden;
+    line-height: 1.3;
+    transition: 1s;
+}
+.main_width.main_page .items_experience input:checked ~ .text,
+.main_width.main_page .items_experience input:checked ~ .text.img{
+max-height: max-content;
+margin-bottom: 20px;
+}
+
+.main_width.main_page .coliving_people .items_experience{
+    width: 100%;
+    display: flex;
+    grid-column-gap: 20px;
+    margin-bottom: 40px;
+}
+.main_width.main_page .coliving_people .items_experience .content_row{
+    width: 33%;
+}
+.main_width.main_page .coliving_people .items_experience img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: unset;
+}
+.main_width.main_page .coliving_people .items_experience .item {
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+    border: none;
+    margin-bottom: 10px;
+}
+.main_width.main_page .coliving_people .items_experience .item_price {
+    line-height: 1;
+}
+
+
+.main_width.main_page .coliving_spaces img{
+    margin-bottom: unset;
+}
+/*.content.hide{*/
+/*display: block;*/
+/*}*/
+.house_items_block.hide{
+display: flex;
+grid-column-gap: 20px;
+}
+/**** MAIN PAGE END****/
+
+
+
+@media screen and (max-width: 990px) {
+    .coliving_people .item.right{
+        animation: move-right 3s ease forwards;
+        width: 35%;
+    }
+    @keyframes move-right {
+        to {
+            top: -120px;
+        }
+    }
+    .coliving_people .item.left {
+        animation: move-left 3s ease forwards;
+        width: 40%;
+        position: relative;
+        top: 0;
+    }
+    @keyframes move-left {
+        to {
+            top: -170px;
+        }
+    }
+    .coliving_people {
+        margin-top: 250px;
+    }
+
+    .main_width.main_page .main_search {
+        grid-column-gap: 10px;
+    }
+    .main_width.main_page .main_search a{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .our_houses .content_houses .house_item {
+        width: 50%;
+    }
+    .our_houses .content_houses .house_item.last {
+        display: none;
+    }
+    .outpost_coliving_blog .blog_list .item img {
+         height: unset;
+    }
+    .outpost_blog p{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 900px) {
+    .hot-deals_block .content_width .first_title .executive2,
+    .hot-deals_block .content_width .second_title span{
+        display: block;
+        width: 90%;
+    }
+    .footer .second_footer_block .menu_second .info_txt a {
+        font-size: 25px;
+    }
+    .footer .second_footer_block .menu_second .info_txt a{
+        font-size: 22px;
+    }
+    .footer .second_footer_block .menu_second a {
+        font-size: 23px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .footer .second_footer_block .menu_second .col_mail {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}
+@media screen and (max-width: 830px) {
+    .main_width.rooms .room a.h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 780px){
+    .outpost_experience .items_experience li .item {
+        font-size: 30px;
+    }
+
+
+    .main_width.main_page .main_search {
+        grid-column-gap: unset;
+        flex-wrap: wrap;
+        padding: 0 30px;
+    }
+    .main_width.main_page .main_search a{
+        font-size: 25px;
+        width: calc(50% - 30px);
+        margin: 0 30px 30px 0;
+    }
+    .main_width.main_page .main_search a.l_block{
+        margin: 0 15px 30px 15px;
+    }
+    .main_width.main_page .main_search a img {
+        margin-right: 15px;
+    }
+    .main_width.main_page .main_search a span{
+        width: 100%;
+        justify-content: flex-start;
+        display: flex;
+    }
+    .main_width.main_page .coliving_people .items_experience .item {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 770px){
+    .coliving_included .coliving_icons .item:last-child {
+        display: none;
+    }
+}
+@media screen and (max-width: 750px){
+    .header .main_width .main_menu .mob_block {
+            display: flex;
+        }
+    .header .main_width .color_logo {
+        width: 230px;
+        padding: 35px 20px 0 30px;
+    }
+    .header .main_width .main_menu li:not(:last-child){
+        display: none;
+    }
+    .header .main_width .main_menu .open_sidebar{
+        display: flex;
+        height: 34px;
+        width: 34px;
+        margin-right: 30px;
+    }
+    .open_sidebar::before, .open_sidebar::after{
+        width: 60px;
+        height: 5px;
+        border-radius: unset;
+    }
+    .open_sidebar::before{
+        content: "";
+        top: 40%;
+    }
+    .icon-menu{
+        top: 84%;
+        left: 50%;
+        height: 5px;
+        width: 60px;
+        border-radius: unset;
+    }
+    .open_sidebar::after{
+        content: "";
+        bottom: -44%;
+    }
+    #mob_sidebar:checked ~ .sidebar{
+        width: 40%;
+    }
+    .sidebar .menu li a:not(.button), .sidebar .menu li span:not(.button){
+        font-size: 20px;
+    }
+    .wrapper{
+        width: 100%;
+    }
+    .sidebar .menu li.menu_about ul a{
+        font-size: 21px;
+    }
+    .menu li div.green{
+        border-bottom: 3px solid #c01e32;
+    }
+    .sidebar .menu li .button{
+        font-size: 18px;
+        letter-spacing: 7px;
+    }
+    .about_coliving h1, .outpost_blog h1,
+    .outpost_blog .path, .our_houses .first_title,
+    .follow_us .content_width, .coliving_included .first_title, .coliving_included .second_title,
+    .outpost_experience .first_title, .coliving_locations h3,
+    .about_coliving p, .coliving_locations p,
+    .outpost_experience p, .outpost_blog p,
+    .coliving_concept .content_width, .coliving_spaces .content_width,
+    .coliving_community .content_width, .outpost_coliving_blog .content_width{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .coliving_people .first_title,.coliving_people .second_title, .coliving_blog .first_title,
+    .coliving_blog .item_title{
+        padding-left: 30px;
+    }
+    .outpost_experience .items_experience li .item {
+        font-size: 25px;
+        margin: 15px 15px 0 30px;
+    }
+    .outpost_experience .items_experience li .text {
+        margin: 0 100px 13px 30px;
+    }
+    .coliving_people a {
+        bottom: 82px;
+    }
+    .hot-deals_block .coliving_people a {
+        bottom: 0;
+    }
+    .about_coliving h1{
+        font-size: 40px;
+        line-height: 0.9;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .about_coliving p, .coliving_locations p, .outpost_experience p, .outpost_blog p, .oc_info_block p {
+        font-size: 25px;
+    }
+    .first_title{
+        font-size: 40px;
+    }
+    .second_title{
+        font-size: 35px;
+    }
+    .coliving_blog .item {
+        width: 50%;
+    }
+    .coliving_blog .item.first_post {
+        margin-right: 15px;
+    }
+    .coliving_blog .item.second_post {
+        margin-right: 0;
+        margin-left: 15px;
+    }
+    .coliving_blog .blog_content > .item:nth-child(3) {
+        display: none;
+    }
+    .hot-deals_block h1{
+        padding-left: 30px;
+    }
+    .hot-deals_block .content_width{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .hot-deals_block .hd_title{
+        padding-left: 30px;
+    }
+    .follow_us .sign_news_block {
+        right: 30px;
+        margin-right: unset;
+    }
+
+    .main_width.main_page .oc_info_block {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 740px) {
+    .footer .second_footer_block .menu_second a {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .coliving_included .coliving_icons .item.third_icon {
+        display: none;
+    }
+    .hot-deals_block .content_width .col_paragraph {
+        padding-left: 30px;
+    }
+    .coliving_included .coliving_icons .item {
+        width: 50%;
+    }
+    .coliving_included .coliving_icons {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .coliving_people .item.right,
+    .coliving_people .item.left {
+        display: none;
+    }
+    .coliving_people .first_title {
+        margin-top: 400px;
+    }
+    .coliving_people {
+        margin-top: 50px;
+        overflow: hidden;
+    }
+    .footer .second_footer_block .menu_second .col_mail {
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 670px) {
+    .footer .second_footer_block .menu_second .info_txt a {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .hot-deals_block .content_width {
+        flex-direction: column;
+    }
+    .hot-deals_block .content_width .col_title, .hot-deals_block .content_width .col_paragraph {
+        width: 100%;
+    }
+    .hot-deals_block .col_paragraph p {
+        padding-left: 0;
+    }
+
+    .hot-deals_block .content_width .col_paragraph {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    .coliving_concept .content_width,
+    .coliving_spaces .content_width,
+    .coliving_community .content_width,
+    .coliving_locations .coliving_cities {
+        flex-direction: column;
+    }
+
+    .coliving_concept .col_paragraph,
+    .coliving_spaces .col_paragraph,
+    .coliving_community .col_paragraph,
+    .coliving_locations .coliving_cities .cities_group {
+        width: 100%;
+    }
+
+    .coliving_locations .coliving_cities .cities_group.right,
+    .coliving_locations .coliving_cities .cities_group.left {
+        padding: 0;
+    }
+
+    .outpost_experience .hr {
+        display: block;
+        margin-top: 0;
+    }
+
+
+    .follow_us .content_width{
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+    }
+    .follow_us .content_width .social_networks,
+    .follow_us .content_width .sign_news_block{
+        width: 100%;
+    }
+    .follow_us .content_width .sign_news_block{
+        position: unset;
+        margin-top: 30px;
+        margin-right: unset;
+    }
+    .follow_us .sign_news_block img {
+        right: 30px;
+    }
+
+
+
+    .footer .first_footer_block,
+    .footer .second_footer_block {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .footer .first_footer_block .menu_first,
+    .footer .first_footer_block .menu_second {
+        width: 100%;
+    }
+
+    .footer .first_footer_block .menu_first {
+        line-height: 1.2;
+        font-size: 40px;
+        padding-left: 0;
+    }
+
+    .footer .first_footer_block .menu_second {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .footer .main_width .first_footer_block hr {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .footer .first_footer_block hr {
+        width: 100%;
+        background: #fff;
+        margin-bottom: 30px;
+    }
+
+    .footer .first_footer_block .menu_third {
+        display: none;
+    }
+
+    .footer .second_footer_block .menu_second a {
+        font-size: 36px;
+    }
+
+    .footer .second_footer_block .menu_first .sign_news_block .sign_news {
+        font-size: 40px;
+    }
+
+    .footer .second_footer_block .menu_first .sign_news_block img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .footer .second_footer_block .menu_first {
+        width: 100%;
+        margin: 60px 0;
+    }
+
+    .footer .second_footer_block .menu_second {
+        display: block;
+        width: 60%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .footer .second_footer_block .menu_second .info_txt a {
+        font-size: 30px;
+    }
+
+
+    .main_width.main_page .coliving_people .content_houses {
+        margin-bottom: 60px;
+    }
+    .coliving_people .items_experience{
+        flex-direction: column;
+    }
+    .main_width.main_page .coliving_people .content_row{
+        list-style-type: none;
+        cursor: pointer;
+        border-bottom: 1px solid #000;
+    }
+    .main_width.main_page .coliving_people .items_experience .text {
+        max-height: 0;
+    }
+    .main_width.main_page .coliving_people .content_row .item {
+        width: calc(100% - 40px);
+        cursor: pointer;
+        position: relative;
+        font-size: 35px;
+        padding: 10px 10px 10px 30px;
+    }
+    .main_width.main_page .coliving_people .content_row .item:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 39px;
+        transform: translateY(-50%);
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #111;
+    }
+    .main_width.main_page .coliving_people .content_row .item:after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 48px;
+        transform: translateY(-50%);
+        display: block;
+        width: 2px;
+        height: 20px;
+        background: #111;
+        transition: .2s;
+    }
+    .main_width.main_page .coliving_people .items_experience .content_row{
+        width: 100%;
+    }
+    .main_width.main_page .coliving_people .first_title {
+        margin-top: 300px;
+    }
+}
+@media screen and (max-width: 610px) {
+        .outpost_experience .items_experience li .item {
+            font-size: 30px;
+        }
+    }
+@media screen and (max-width: 580px) {
+        .outpost_experience .items_experience li .item {
+            font-size: 35px;
+        }
+    }
+@media screen and (max-width: 550px) {
+    body {
+        position: relative;
+    }
+
+    .header .main_width .logo {
+        width: 70%;
+    }
+
+    .header .main_width {
+        padding-top: 30px;
+    }
+
+    .about_coliving .main_menu .button_li,
+    .main_width.main_page .main_menu .button_li {
+        display: block;
+        background: #AF332B;
+        text-align: center;
+        margin: 0 30px 20px 30px;
+    }
+
+    .main_width.main_page .main_menu .button_li {
+        margin: 0 0 20px 0;
+    }
+
+    .about_coliving .main_menu .button_li a,
+    .main_width.main_page .main_menu .button_li a {
+        font-size: 50px;
+        font-weight: normal;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 0.6;
+    }
+
+    .main_width {
+        width: 100%;
+    }
+
+    .about_coliving p, .coliving_locations p {
+        line-height: 1;
+        margin: 0 0 30px 0;
+    }
+
+    .coliving_concept {
+        margin-bottom: 130px;
+    }
+
+    .coliving_concept .col_title,
+    .coliving_spaces .col_title,
+    .coliving_community .col_title {
+        margin-bottom: 10px;
+    }
+
+    .coliving_included {
+        margin-bottom: 220px;
+    }
+
+    .coliving_included .hr {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .coliving_included .coliving_icons {
+        padding: 70px 0 0;
+    }
+
+    .coliving_included .coliving_icons .item {
+        display: block;
+        width: 50%;
+    }
+
+    .coliving_included .coliving_icons .item {
+        padding: 0 10px 10px;
+        margin: 0;
+    }
+
+    .coliving_concept .col_title .first_title,
+    .coliving_spaces .col_title .first_title {
+        margin-bottom: 0;
+    }
+
+    .coliving_people {
+        overflow: hidden;
+        margin-top: 50px;
+    }
+
+    .coliving_people .item.center {
+        width: 400px;
+        position: absolute;
+        left: 100px;
+    }
+
+    .coliving_people .item.center .item_title {
+        display: inline-block;
+        width: 70%;
+        font-size: 32px;
+        padding: 50px 0 0 115px;
+    }
+
+    .coliving_people .item_img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .coliving_people .item_text {
+        font-size: 18px;
+    }
+
+    .peoples_feedback {
+        justify-content: unset;
+    }
+
+    /*.coliving_people .second_title {*/
+    /*    width: 65%;*/
+    /*}*/
+
+    .coliving_people a {
+        bottom: 50px;
+    }
+
+    .coliving_people .hr {
+        margin-top: 120px;
+    }
+
+    .coliving_blog {
+        margin-bottom: 80px;
+    }
+
+    .blog_content {
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    .coliving_icons .slick-prev,
+    .coliving_icons .slick-next {
+        top: -50px;
+    }
+
+    .coliving_icons .slick-prev,
+    .blog_content .slick-prev {
+        left: unset;
+        right: 100px;
+    }
+
+    .blog_content .slick-prev, .blog_content .slick-next {
+        top: unset;
+        bottom: -53px;
+    }
+
+    .coliving_icons .slick-prev:before,
+    .coliving_icons .slick-next:before,
+    .blog_content .slick-prev:before,
+    .blog_content .slick-next:before {
+        font-size: 65px;
+    }
+
+    .coliving_icons .slick-next,
+    .blog_content .slick-next {
+        right: 30px;
+    }
+
+    .coliving_blog .item.first_post .preview,
+    .coliving_blog .item.second_post .preview,
+    .coliving_blog .item.third_post .preview {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .coliving_blog .first_title {
+        display: table-cell;
+        width: 100%;
+        font-size: 35px;
+    }
+
+    .coliving_blog .item.first_post .item_text {
+        margin-bottom: 235px;
+    }
+
+    .coliving_blog .item.second_post .item_text {
+        margin-bottom: 50px;
+    }
+
+    .coliving_blog .item.third_post .item_text {
+        margin-bottom: 285px;
+    }
+
+    .coliving_blog .item.first_post .img img,
+    .coliving_blog .item.third_post .img img {
+        margin-top: 0;
+    }
+
+    .coliving_blog .item.first_post,
+    .coliving_blog .item.second_post,
+    .coliving_blog .item.third_post {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .coliving_blog .item_title {
+        padding-left: 0;
+    }
+
+    .coliving_blog .blog_arrow {
+        display: none;
+    }
+
+    .coliving_blog .blog_content .blog_arrow-down {
+        display: block;
+        width: 40px;
+        float: right;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    .coliving_blog .more_info {
+        display: none;
+    }
+
+    .coliving_people .item.center .triangle-bottom {
+        bottom: 22px;
+        left: 55px;
+        transform: rotate(39deg);
+    }
+
+
+
+    .coliving_people .first_title {
+        margin-top: 500px;
+    }
+
+    .coliving_included .coliving_icons .item.third_icon {
+        display: block;
+    }
+
+    .outpost_coliving_blog .blog_content,
+    .our_houses .content_houses {
+        flex-direction: column;
+    }
+
+    .outpost_coliving_blog .blog_list,
+    .our_houses .content_houses .house_item {
+        width: 100%;
+    }
+
+    .our_houses .content_houses .house_item {
+        margin: 0 0 40px 0;
+    }
+
+    .outpost_coliving_blog .blog_list.first,
+    .outpost_coliving_blog .blog_list.second {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .outpost_blog h1, .outpost_coliving_blog .first_title,
+    .outpost_coliving_blog .second_title, .our_houses .first_title,
+    .follow_us .first_title {
+        font-size: 40px;
+        line-height: 1;
+    }
+
+    .outpost_blog h1 {
+        padding: 30px 30px 10px;
+    }
+
+    .outpost_blog .path {
+        padding-left: 30px;
+    }
+
+    .outpost_coliving_blog .content_width {
+        flex-direction: column;
+    }
+
+    .outpost_coliving_blog .second_title {
+        margin-bottom: 0;
+    }
+
+    .outpost_coliving_blog .col_paragraph {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 70px;
+    }
+
+    .outpost_coliving_blog .blog_list .item img {
+        height: max-content;
+    }
+
+    .outpost_coliving_blog .blog_list .item {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .follow_us .social_networks .first_title {
+        margin-bottom: 10px;
+    }
+
+    .follow_us .social_networks a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .follow_us .social_networks a img {
+        padding: 11px;
+    }
+
+    .our_houses .content_houses .house_item.last {
+        display: block;
+    }
+
+    .our_houses .content_houses .house_item .item_title,
+    .our_houses .content_houses .house_item .col_paragraph span,
+    .our_houses .content_houses .house_item .item_price {
+        margin-left: 30px;
+    }
+
+    .footer .main_width hr:first-child {
+        display: none;
+    }
+
+    .footer .second_footer_block {
+        padding: 30px 30px 100px 30px;
+    }
+
+    .footer .second_footer_block .menu_first {
+        width: 100%;
+        padding: 50px 0 100px 0;
+    }
+
+    .footer .second_footer_block .menu_second a {
+        font-size: 33px;
+    }
+
+    .footer .second_footer_block .menu_second a:last-child {
+        font-size: 18px;
+    }
+
+    .header .main_width .main_menu li {
+        right: 8%;
+    }
+
+    #mob_sidebar:checked ~ .sidebar {
+        width: 50%;
+    }
+
+    .sidebar .menu li a:not(.button), .sidebar .menu li span:not(.button) {
+        font-size: 17px;
+    }
+
+    .sidebar .menu li.menu_about ul a {
+        font-size: 17px;
+    }
+
+    .sidebar .menu li .button {
+        font-size: 16px;
+        letter-spacing: 7px;
+    }
+
+    .footer .second_footer_block .menu_second .info_txt a {
+        font-size: 35px;
+    }
+
+
+    .main_width.main_page .col_title {
+        width: 100%;
+        position: unset;
+        /*padding: 0 30px;*/
+    }
+
+    .main_width.main_page .oc_info_block h1 {
+        /*font-size: 32px;*/
+        margin-bottom: 30px;
+    }
+
+    .main_width.main_page .oc_info_block p {
+        width: 100%;
+    }
+
+    .main_width.main_page .main_search {
+        flex-direction: column;
+        align-items: unset;
+        width: max-content;
+        justify-content: left;
+        padding: unset;
+        margin: 40px auto;
+    }
+
+    .main_width.main_page .main_search a{
+        width: max-content;
+    }
+    /*.main_width.rooms .room a {*/
+    /*    justify-content: center;*/
+    /*}*/
+    .main_width.rooms .room a.h2 {
+        font-size: 25px;
+    }
+
+    .main_width.rooms .room .h2,
+    .main_width.rooms .room .annotation {
+        padding: 0 30px;
+    }
+
+    .main_width.main_page .main_search a,
+    .main_width.main_page .main_search a.l_block {
+        align-items: center;
+        margin: 0 0 20px 0;
+    }
+
+    .main_width.main_page .main_search a span {
+        font-size: 32px;
+    }
+
+    .main_width.rooms {
+        flex-direction: column;
+    }
+
+    .main_width.rooms .room {
+        width: 100%;
+        margin: 0 0 40px 0;
+    }
+
+    .our_houses .content_houses .house_item .item_title {
+        font-size: 35px;
+    }
+
+    .main_width.main_page .oc_block .content_width {
+        flex-direction: column;
+    }
+
+    .main_width.main_page .oc_block .col_paragraph {
+        width: 100%;
+    }
+
+    .main_width.main_page .items_experience li .item,
+    .main_width.main_page .items_experience li .item_title {
+        font-size: 70px;
+        margin: 15px 15px 0 30px;
+        border: none;
+    }
+    .main_width.main_page .items_experience .content_row input:checked ~ .text,
+    .main_width.main_page .items_experience ul li input:checked ~ .text {
+        transition: unset;
+        margin: 0 30px 30px;
+    }
+
+    .main_width.main_page .items_experience .content_row input:checked ~ .text1
+    .main_width.main_page .items_experience ul li input:checked ~ .text1 {
+        transition: unset;
+        margin: 0;
+    }
+
+    .main_width.main_page .items_experience li .text1 {
+        font-family: 'GalanoGrotesque';
+        position: relative;
+        display: block;
+        font-size: 23px;
+        max-height: 0;
+        overflow: hidden;
+        line-height: 1.3;
+        transition: 1s;
+        margin: 0;
+    }
+
+    .main_width.main_page .content_houses .items_experience.hide,
+    .main_width.main_page .oc_block .col_paragraph .items_experience{
+        display: block;
+    }
+
+    .main_width.main_page .coliving_people {
+        margin-top: 500px;
+    }
+
+    .oc_block {
+        position: relative;
+    }
+
+    .main_width.main_page .right_text a {
+        /*position: absolute;*/
+        font-size: 40px;
+        z-index: 10;
+        bottom: -460px;
+        right: 0;
+        margin-top: unset;
+    }
+
+    .triangle_bounce.center {
+        width: 430px;
+        bottom: -570px;
+        left: -35px;
+    }
+
+    .triangle_bounce.center .triangle-bottom {
+        width: 0;
+        top: 19px;
+        transform: rotate(218deg);
+    }
+
+    .oc_block .content_width .first_title {
+        padding: 0 30px;
+    }
+
+    .main_width.main_page .content_houses .items_experience li .item {
+        font-size: 40px;
+        width: 90%;
+    }
+
+    .house_items_block.hide {
+        display: none;
+    }
+
+
+    .content_row, .content_row_title {
+        list-style-type: none;
+        cursor: pointer;
+        border-bottom: 1px solid #000;
+    }
+    .content_row p{
+        display: none;
+    }
+    .main_width.main_page .oc_block .content_row label{
+        width: calc(100% - 40px);
+        cursor: pointer;
+        position: relative;
+        font-size: 70px;
+        padding: 10px 10px 10px 30px;
+    }
+
+    .main_width.main_page .oc_block .content_row .item:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 39px;
+        transform: translateY(-50%);
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: #111;
+    }
+    .main_width.main_page .oc_block .content_row .item:after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 48px;
+        transform: translateY(-50%);
+        display: block;
+        width: 2px;
+        height: 20px;
+        background: #111;
+        transition: .2s;
+    }
+    .main_width.main_page .items_experience .text{
+        max-height: 0;
+    }
+
+    .content_row, .content_row_title {
+        flex-direction: column;
+    }
+    .content_row_title p {
+        padding: 30px;
+    }
+    .content_row_title p span{
+        font-weight: 600;
+    }
+    .content_row_title .first_item {
+        justify-content: center;
+        padding: unset;
+        margin-top: 50px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .outpost_experience .items_experience li .item {
+        font-size: 30px;
+    }
+    .footer .second_footer_block .menu_first .sign_news_block .sign_news {
+        font-size: 35px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
